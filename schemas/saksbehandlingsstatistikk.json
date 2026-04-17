@@ -1,0 +1,176 @@
+[
+  {
+    "name": "sekvensnummer",
+    "type": "INT64",
+    "description": "Løpenummer tildelt ved lagring av rad i denne tabellen.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "behandling_id",
+    "type": "STRING",
+    "description": "Unik identifikator for behandlingen. kravhode.kravhode_id.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "relatertbehandling_id",
+    "type": "STRING",
+    "description": "Peker på en foregående behandlinger som denne behandlingen bygger på. Kan være null.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "relatert_fagsystem",
+    "type": "STRING",
+    "description": "Settes alltid til PESYS.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "sak_id",
+    "type": "STRING",
+    "description": "Saken behandlingen er knyttet til. En person kan maks ha én sak per sak_ytelse.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "aktor_id",
+    "type": "STRING",
+    "description": "Fødselsnummer knyttet til saken.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "mottatt_tid",
+    "type": "TIMESTAMP",
+    "description": "Tidspunktet da behandlingen oppstår. Settes manuelt av saksbehandler, typisk en dag eller to før registrert_tid. kravhode.dato_mottatt_krav.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "registrert_tid",
+    "type": "TIMESTAMP",
+    "description": "Tidspunkt da behandlingen første gang ble registrert i fagsystemet. kravhode.dato_opprettet.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ferdigbehandlet_tid",
+    "type": "TIMESTAMP",
+    "description": "vedtak.dato_vedtak for ferdige behandlinger, lik trunc(endret_tid) for avbrutte behandlinger.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "utbetalt_tid",
+    "type": "TIMESTAMP",
+    "description": "vedtak.dato_virk_fom - selve utbetalingen kommer ila måneden.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "endret_tid",
+    "type": "TIMESTAMP",
+    "description": "kravhode.dato_endret.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "forventetoppstart_tid",
+    "type": "TIMESTAMP",
+    "description": "vedtak.dato_onsket_virk.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "teknisk_tid",
+    "type": "TIMESTAMP",
+    "description": "Tidspunktet raden oppstår i historikktabellen som dette dataproduktet bygger på.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "sak_ytelse",
+    "type": "STRING",
+    "description": "Settes alltid til UFOREP.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "sak_utland",
+    "type": "STRING",
+    "description": "UTLAND | NASJONAL | UTLANDSTILSNITT. sak.k_utlandstilknytning.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "behandling_type",
+    "type": "STRING",
+    "description": "Type behandling, for eksempel \"Førstegangsbehandling\", \"Revurdering\", \"Klage\" eller \"Anke\". kravhode.k_krav_gjelder.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "behandling_status",
+    "type": "STRING",
+    "description": "Status for behandlingen. Endrer seg i løpet av livsløpet til en behandling. Behandlingen er ferdigbehandlet når behandling_status er 'FERDIG' eller 'AVBRUTT'.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "behandling_resultat",
+    "type": "STRING",
+    "description": "Resultat av behandlingen. Verdien i feltet er avhengig av behandling_type, behandling_status og vedtakstype.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "behandling_metode",
+    "type": "STRING",
+    "description": "MAN | DELAUTO | AUTO - dette feltet er under arbeid per T1 2026. kravhode.k_behandling_t.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "behandling_arsak",
+    "type": "STRING",
+    "description": "t_krav_arsak.k_krav_arsak_t.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "opprettet_av",
+    "type": "STRING",
+    "description": "Hvem som opprettet behandlingen, saksbehandlers ident, system eller bruker.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "saksbehandler",
+    "type": "STRING",
+    "description": "Hvem som har gjort den siste endringen på behandlingen når meldingen oppstår, saksbehandlers ident, system eller bruker. Typisk lik ansvarlig beslutter for behandling_status=FERDIG.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ansvarlig_beslutter",
+    "type": "STRING",
+    "description": "Saksbehandler eller del av systemet som er ansvarlig for å iverksette vedtaket. vedtak.attesterer.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ansvarlig_enhet",
+    "type": "STRING",
+    "description": "Ansvarlig enhet. vedtak.ansvarlig_enhet.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "tilbakekrev_belop",
+    "type": "FLOAT64",
+    "description": "Ikke ferdig. Settes alltid til -1.1.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "funksjonell_periode_fom",
+    "type": "TIMESTAMP",
+    "description": "Ikke ferdig. Settes alltid til 01.01.1900.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "funksjonell_periode_tom",
+    "type": "TIMESTAMP",
+    "description": "Ikke ferdig. Settes alltid til 01.01.1900.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fagsystem_navn",
+    "type": "STRING",
+    "description": "Settes alltid til PESYS.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fagsystem_versjon",
+    "type": "STRING",
+    "description": "Angir hvilken versjon av koden dataene er generert med bakgrunn på.",
+    "mode": "NULLABLE"
+  }
+]
