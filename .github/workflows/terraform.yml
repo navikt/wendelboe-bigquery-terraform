@@ -1,7 +1,10 @@
 name: "Terraform"
 on:
-  workflow_dispatch:
-
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - './README.md'
 env:
   DEV_DIR: './dev'
   PROD_DIR: './prod'
