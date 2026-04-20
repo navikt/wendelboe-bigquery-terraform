@@ -50,3 +50,29 @@ resource "google_bigquery_table_iam_binding" "behandlingshendelse_view_iam_bindi
   role       = "roles/bigquery.dataViewer"
   members    = ["serviceAccount:uforetrygd-ptsak-reader@ptsak-dev-7196.iam.gserviceaccount.com"]
 }
+
+
+module "saksbehandlingsstatistikk_alder_til_team_sak_view" {
+  source              = "../modules/google-bigquery-view"
+  deletion_protection = false
+  dataset_id          = google_bigquery_dataset.saksbehandlingsstatistikk_til_team_sak_dataset.dataset_id
+  view_id             = "saksbehandlingsstatistikk_alder_view"
+  view_description    = "Basert på en rekke hendelser fra pen_dataprodukt skjemaet i pen-databasen"
+  view_schema         = file("${path.module}/../schemas/saksbehandlingsstatistikk.json")
+  view_query          = <<EOF
+SELECT
+  *
+FROM
+  `${var.gcp_project["project"]}.${google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id}.saksbehandlingsstatistikk_alder`
+ORDER BY sekvensnummer
+EOF
+}
+
+
+resource "google_bigquery_table_iam_binding" "behandlingshendelse_alder_view_iam_binding" {
+  project    = var.gcp_project.project
+  dataset_id = google_bigquery_dataset.saksbehandlingsstatistikk_til_team_sak_dataset.dataset_id
+  table_id   = module.saksbehandlingsstatistikk_alder_til_team_sak_view.bigquery_view_id
+  role       = "roles/bigquery.dataViewer"
+  members    = ["serviceAccount:uforetrygd-ptsak-reader@ptsak-dev-7196.iam.gserviceaccount.com"]
+}

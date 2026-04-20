@@ -25,6 +25,14 @@ resource "google_bigquery_dataset" "pen_dataprodukt_dataset" {
   }
 
   access {
+    view {
+      dataset_id = google_bigquery_dataset.saksbehandlingsstatistikk_til_team_sak_dataset.dataset_id
+      project_id = var.gcp_project["project"]
+      table_id   = "saksbehandlingsstatistikk_alder_view"
+    }
+  }
+
+  access {
     role          = "WRITER"
     user_by_email = google_service_account.bigquery_airflow_dvh.email
   }
