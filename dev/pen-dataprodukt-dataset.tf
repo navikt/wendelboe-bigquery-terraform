@@ -58,8 +58,8 @@ resource "google_bigquery_table" "saksbehandlingsstatistikk_alder" {
 }
 
 resource "google_bigquery_dataset_access" "pen_dataprodukt_ufore_view_access" {
-  dataset_id    = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
-  project       = var.gcp_project["project"]
+  dataset_id = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
+  project    = var.gcp_project["project"]
   view {
     dataset_id = google_bigquery_dataset.saksbehandlingsstatistikk_til_team_sak_dataset.dataset_id
     project_id = var.gcp_project["project"]
@@ -70,8 +70,8 @@ resource "google_bigquery_dataset_access" "pen_dataprodukt_ufore_view_access" {
 }
 
 resource "google_bigquery_dataset_access" "pen_dataprodukt_alder_view_access" {
-  dataset_id    = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
-  project       = var.gcp_project["project"]
+  dataset_id = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
+  project    = var.gcp_project["project"]
   view {
     dataset_id = google_bigquery_dataset.saksbehandlingsstatistikk_til_team_sak_dataset.dataset_id
     project_id = var.gcp_project["project"]
