@@ -19,7 +19,7 @@ provider "google" {
 data "google_project" "project" {}
 
 module "google_storage_bucket" {
-  source = "../modules/google-cloud-storage"
+  source   = "../modules/google-cloud-storage"
   name     = "wendelboe-bigquery-terraform-state-dev"
   location = var.gcp_project["region"]
 }

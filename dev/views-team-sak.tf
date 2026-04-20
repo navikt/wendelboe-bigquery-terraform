@@ -31,8 +31,8 @@ module "saksbehandlingsstatistikk_ufore_til_team_sak_view" {
   dataset_id          = google_bigquery_dataset.saksbehandlingsstatistikk_til_team_sak_dataset.dataset_id
   view_id             = "saksbehandlingsstatistikk_ufore_view"
   view_description    = "Basert på en rekke hendelser fra pen_dataprodukt skjemaet i pen-databasen"
-  view_schema = file("${path.module}/../schemas/saksbehandlingsstatistikk.json")
-  view_query = <<EOF
+  view_schema         = file("${path.module}/../schemas/saksbehandlingsstatistikk.json")
+  view_query          = <<EOF
 SELECT
   *
 FROM
