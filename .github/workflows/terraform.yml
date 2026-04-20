@@ -5,6 +5,8 @@ on:
       - main
     paths-ignore:
       - './README.md'
+permissions:
+  contents: read
 env:
   DEV_DIR: './dev'
   PROD_DIR: './prod'
