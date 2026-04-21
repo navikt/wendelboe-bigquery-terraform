@@ -1,0 +1,102 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "periode",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sak_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "vedtak_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "kravhode_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_regelverk_t",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "person_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fnr",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_sak_t",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_vedtak_s",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_vedtak_t",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dato_lopende_fom",
+    "type": "DATETIME"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dato_lopende_tom",
+    "type": "DATETIME"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "bostedsland",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "inntekt",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "inntekt_eps",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "eps_aarlig_inntekt",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "afp_privat_flagg",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_afp_t",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_sivilstand_t",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "kjoretidspunkt",
+    "type": "DATETIME"
+  }
+]

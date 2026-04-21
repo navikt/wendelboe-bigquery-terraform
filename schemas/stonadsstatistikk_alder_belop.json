@@ -1,0 +1,182 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "periode",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sak_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "vedtak_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "kravhode_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_regelverk_t",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "beregning_id",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "pen_under_utbet_id",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "brutto",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "netto",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_minstepen_niva",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "mpn_arsak_sats",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "prorata_teller",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "prorata_nevner",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "psats_gp",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "gp_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tp_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "pt_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "st_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ip_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "et_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "vt_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "gap_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "gat_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "gjt_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "afp_t_netto",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "saerkull_netto",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "barn_felles_netto",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "skjermt_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "gjt_k19_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ufor_sum_ut_ord_netto",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "afp_livsvarig_netto",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "mpn_indiv_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "mpn_sstot_netto",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ap_kap19_med_gjr_bel",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ap_kap19_uten_gjr_bel",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "kjoretidspunkt",
+    "type": "DATETIME"
+  }
+]

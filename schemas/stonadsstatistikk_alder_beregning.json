@@ -1,0 +1,142 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "periode",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sak_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "vedtak_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "kravhode_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_regelverk_t",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "beregning_id",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "pen_under_utbet_id",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "brutto",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "netto",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "uttaksgrad",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tt_anv_g_opptj",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tt_anv_n_opptj",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_bereg_metode_t",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_bor_med_t",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tp_restpensjon",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "pt_restpensjon",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "gp_restpensjon",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "beholdning_pensjon_belop",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "beholdning_garan_pen_belop",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "beholdning_garan_tlg_belop",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "minstepen_niva_arsak",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "red_pga_inst_opph_flagg",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "yrkesskade_anv_flagg",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "yrkesskade_rett_flagg",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "gjenlevrett_anv",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "innv_gj_rett",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "minstepensjon",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "kjoretidspunkt",
+    "type": "DATETIME"
+  }
+]
