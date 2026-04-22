@@ -37,7 +37,6 @@ SELECT
   *
 FROM
   `${var.gcp_project["project"]}.${google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id}.saksbehandlingsstatistikk_ufore`
-ORDER BY sekvensnummer
 EOF
 }
 
@@ -64,7 +63,6 @@ SELECT
   *
 FROM
   `${var.gcp_project["project"]}.${google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id}.saksbehandlingsstatistikk_alder`
-ORDER BY sekvensnummer
 EOF
 }
 
