@@ -1,0 +1,47 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "sak_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hoveddiagnose",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "bidiagnoser",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sakstype",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sak_status",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "vedtak_id_sist_lopende",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "vedtakstype",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "vedtak_status",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "diagnose_oppdatert_tidspunkt",
+    "type": "DATETIME"
+  }
+]

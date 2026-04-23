@@ -81,3 +81,15 @@ resource "google_bigquery_dataset_access" "pen_dataprodukt_stonadsstatistikk_ald
 
   depends_on = [module.stonadsstatistikk_alder_vedtak_til_team_pensjon_dvh_view]
 }
+
+resource "google_bigquery_table" "pen_ufore_diagnosekoder" {
+  dataset_id = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
+  table_id   = "pen_ufore_diagnosekoder"
+
+  labels = {
+    env = "default"
+  }
+
+  schema = file("${path.module}/../schemas/pen_ufore_diagnosekoder.json")
+
+}
