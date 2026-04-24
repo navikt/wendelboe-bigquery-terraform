@@ -27,22 +27,22 @@
   {
     "mode": "NULLABLE",
     "name": "beregning_id",
-    "type": "FLOAT"
+    "type": "INTEGER"
   },
   {
     "mode": "NULLABLE",
     "name": "pen_under_utbet_id",
-    "type": "FLOAT"
+    "type": "INTEGER"
   },
   {
     "mode": "NULLABLE",
     "name": "brutto",
-    "type": "INTEGER"
+    "type": "FLOAT"
   },
   {
     "mode": "NULLABLE",
     "name": "netto",
-    "type": "INTEGER"
+    "type": "FLOAT"
   },
   {
     "mode": "NULLABLE",
