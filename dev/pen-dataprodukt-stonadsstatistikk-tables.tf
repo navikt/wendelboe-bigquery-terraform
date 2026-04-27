@@ -2,7 +2,8 @@ resource "google_bigquery_table" "stonadsstatistikk_alder_belop" {
   dataset_id = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
   table_id   = "stonadsstatistikk_alder_belop"
   time_partitioning {
-    type = "DAY"
+    type  = "MONTH"
+    field = "periode"
   }
 
   labels = {
@@ -17,7 +18,8 @@ resource "google_bigquery_table" "stonadsstatistikk_alder_beregning" {
   dataset_id = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
   table_id   = "stonadsstatistikk_alder_beregning"
   time_partitioning {
-    type = "DAY"
+    type  = "MONTH"
+    field = "periode"
   }
 
   labels = {
@@ -32,7 +34,8 @@ resource "google_bigquery_table" "stonadsstatistikk_alder_vedtak" {
   dataset_id = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
   table_id   = "stonadsstatistikk_alder_vedtak"
   time_partitioning {
-    type = "DAY"
+    type  = "MONTH"
+    field = "periode"
   }
 
   labels = {

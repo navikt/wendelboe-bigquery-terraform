@@ -3,7 +3,8 @@ resource "google_bigquery_table" "stonadsstatistikk_alder_belop" {
   table_id   = "stonadsstatistikk_alder_belop"
 
   time_partitioning {
-    type = "DAY"
+    type  = "MONTH"
+    field = "periode"
   }
 
   labels = {
@@ -19,7 +20,8 @@ resource "google_bigquery_table" "stonadsstatistikk_alder_beregning" {
   table_id   = "stonadsstatistikk_alder_beregning"
 
   time_partitioning {
-    type = "DAY"
+    type  = "MONTH"
+    field = "periode"
   }
 
   labels = {
@@ -35,7 +37,8 @@ resource "google_bigquery_table" "stonadsstatistikk_alder_vedtak" {
   table_id   = "stonadsstatistikk_alder_vedtak"
 
   time_partitioning {
-    type = "DAY"
+    type  = "MONTH"
+    field = "periode"
   }
 
   labels = {
