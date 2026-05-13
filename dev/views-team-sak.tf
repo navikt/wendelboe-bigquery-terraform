@@ -21,6 +21,10 @@ resource "google_bigquery_dataset" "saksbehandlingsstatistikk_til_team_sak_datas
     role          = "READER"
     user_by_email = "uforetrygd-ptsak-reader@ptsak-dev-7196.iam.gserviceaccount.com"
   }
+  access {
+    role          = "READER"
+    user_by_email = "pensjon-ptsak-reader@ptsak-dev-7196.iam.gserviceaccount.com"
+  }
   timeouts {}
 }
 
@@ -72,5 +76,5 @@ resource "google_bigquery_table_iam_binding" "behandlingshendelse_alder_view_iam
   dataset_id = google_bigquery_dataset.saksbehandlingsstatistikk_til_team_sak_dataset.dataset_id
   table_id   = module.saksbehandlingsstatistikk_alder_til_team_sak_view.bigquery_view_id
   role       = "roles/bigquery.dataViewer"
-  members    = ["serviceAccount:uforetrygd-ptsak-reader@ptsak-dev-7196.iam.gserviceaccount.com"]
+  members    = ["serviceAccount:pensjon-ptsak-reader@ptsak-dev-7196.iam.gserviceaccount.com"]
 }
