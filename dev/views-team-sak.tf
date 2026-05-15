@@ -25,6 +25,10 @@ resource "google_bigquery_dataset" "saksbehandlingsstatistikk_til_team_sak_datas
     role          = "READER"
     user_by_email = "pensjon-ptsak-reader@ptsak-dev-7196.iam.gserviceaccount.com"
   }
+  access {
+    role          = "READER"
+    user_by_email = "trond.bakke.flogstad@nav.no"
+  }
   timeouts {}
 }
 
