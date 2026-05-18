@@ -2,7 +2,8 @@
   {
     "mode": "NULLABLE",
     "name": "periode",
-    "type": "DATE"
+    "type": "DATE",
+    "description": "Måneden dataen gjelder for."
   },
   {
     "mode": "NULLABLE",
@@ -14,12 +15,13 @@
     "mode": "NULLABLE",
     "name": "vedtak_id",
     "type": "INTEGER",
-    "description": "ID for det løpende vedtaket. Månedlig unik i kombinasjon med periode."
+    "description": "ID for vedtaket som var løpende kl 23:59:59 siste dag i måneden. Månedlig unik i kombinasjon med periode."
   },
   {
     "mode": "NULLABLE",
     "name": "kravhode_id",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": "ID for kravet som vedtaket knyttet til. Et vedtak har alltid ett krav."
   },
   {
     "mode": "NULLABLE",
