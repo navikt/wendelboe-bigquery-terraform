@@ -7,12 +7,14 @@
   {
     "mode": "NULLABLE",
     "name": "sak_id",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": "ID for saken i Pesys"
   },
   {
     "mode": "NULLABLE",
     "name": "vedtak_id",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": "ID for det løpende vedtaket. Månedlig unik i kombinasjon med periode."
   },
   {
     "mode": "NULLABLE",
@@ -22,7 +24,8 @@
   {
     "mode": "NULLABLE",
     "name": "k_regelverk_t",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "Typen regelverk som er anvendt i utregningen av ytelsen. G_REG: Til og med 2010, gammelt regelverk (AP kap 19 tom 2010). N_REG_G_OPPTJ: 2011-2015 nytt regelverk, gammel opptjening (AP kap. 19 og kap. 20). N_REG_G_N_OPPTJ: 2016-2024 nytt regelverk, kombo av gammel og ny opptjening (AP kap 19 fom 2011) - overgangskullene født 1954-1962. N_REG_N_OPPTJ: Fra og med 2025, nytt regelverk og ny opptjening (AP kap. 20)."
   },
   {
     "mode": "NULLABLE",
@@ -37,32 +40,38 @@
   {
     "mode": "NULLABLE",
     "name": "brutto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "Brutto beløp for beregning fra t_pen_under_utbet (KAP 20) eller t_beregning (KAP 19)"
   },
   {
     "mode": "NULLABLE",
     "name": "netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "Netto beløp for beregning fra t_pen_under_utbet (KAP 20) eller t_beregning (KAP 19)"
   },
   {
     "mode": "NULLABLE",
     "name": "uttaksgrad",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": "Uttagsgrad [0,1], eksisterer ikke for KAP 19"
   },
   {
     "mode": "NULLABLE",
     "name": "tt_anv_g_opptj",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "Trygdetid etter gammel opptjening"
   },
   {
     "mode": "NULLABLE",
     "name": "tt_anv_n_opptj",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "Trygdetid etter ny opptjening"
   },
   {
     "mode": "NULLABLE",
     "name": "k_bereg_metode_t",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "Beregning metode"
   },
   {
     "mode": "NULLABLE",
@@ -112,31 +121,37 @@
   {
     "mode": "NULLABLE",
     "name": "yrkesskade_anv_flagg",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "Indikerer om personen har yrkesskade ytelse ved siden av pensjonen."
   },
   {
     "mode": "NULLABLE",
     "name": "yrkesskade_rett_flagg",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "Indikerer om personen har rett til yrkesskade ytelse ved siden av pensjonen."
   },
   {
     "mode": "NULLABLE",
     "name": "gjenlevrett_anv",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "gjenlevrett anvendt"
   },
   {
     "mode": "NULLABLE",
     "name": "innv_gj_rett",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "innvilget gjenlevenderett"
   },
   {
     "mode": "NULLABLE",
     "name": "minstepensjon",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "1 | 0"
   },
   {
     "mode": "NULLABLE",
     "name": "kjoretidspunkt",
-    "type": "DATETIME"
+    "type": "DATETIME",
+    "description": "Tidspunkt for kjøring av transformasjonen"
   }
 ]

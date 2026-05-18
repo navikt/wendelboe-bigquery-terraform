@@ -7,12 +7,14 @@
   {
     "mode": "NULLABLE",
     "name": "sak_id",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": "ID for saken i Pesys"
   },
   {
     "mode": "NULLABLE",
     "name": "vedtak_id",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": "ID for det løpende vedtaket. Månedlig unik i kombinasjon med periode."
   },
   {
     "mode": "NULLABLE",
@@ -22,7 +24,8 @@
   {
     "mode": "NULLABLE",
     "name": "k_regelverk_t",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "Typen regelverk som er anvendt i utregningen av ytelsen. G_REG: Til og med 2010, gammelt regelverk (AP kap 19 tom 2010). N_REG_G_OPPTJ: 2011-2015 nytt regelverk, gammel opptjening (AP kap. 19 og kap. 20). N_REG_G_N_OPPTJ: 2016-2024 nytt regelverk, kombo av gammel og ny opptjening (AP kap 19 fom 2011) - overgangskullene født 1954-1962. N_REG_N_OPPTJ: Fra og med 2025, nytt regelverk og ny opptjening (AP kap. 20)."
   },
   {
     "mode": "NULLABLE",
@@ -37,146 +40,175 @@
   {
     "mode": "NULLABLE",
     "name": "brutto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "Brutto beløp for beregning fra t_pen_under_utbet (KAP 20) eller t_beregning (KAP 19)"
   },
   {
     "mode": "NULLABLE",
     "name": "netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "Netto beløp for beregning fra t_pen_under_utbet (KAP 20) eller t_beregning (KAP 19)"
   },
   {
     "mode": "NULLABLE",
     "name": "k_minstepen_niva",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "HOY_ENSLIG, SAERSKILT, LAV, ORDINAER, HOY"
   },
   {
     "mode": "NULLABLE",
     "name": "mpn_arsak_sats",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "Sats for minstepensjon, som her kun er satt for de som har minstepensjon og G_REG + N_REG_G_OPPTJ."
   },
   {
     "mode": "NULLABLE",
     "name": "prorata_teller",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "hentes gjennom relasjon ytelse_kome -> t_anvendt_trygdetid -> t_brok"
   },
   {
     "mode": "NULLABLE",
     "name": "prorata_nevner",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "hentes gjennom relasjon ytelse_kome -> t_anvendt_trygdetid -> t_brok"
   },
   {
     "mode": "NULLABLE",
     "name": "psats_gp",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "gp_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "tp_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "pt_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "st_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "ip_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "et_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "vt_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "gap_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "gat_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "gjt_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "afp_t_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "saerkull_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "barn_felles_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "skjermt_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "gjt_k19_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "ufor_sum_ut_ord_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "afp_livsvarig_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "mpn_indiv_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "mpn_sstot_netto",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "ap_kap19_med_gjr_bel",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "ap_kap19_uten_gjr_bel",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "ytelse komp"
   },
   {
     "mode": "NULLABLE",
     "name": "kjoretidspunkt",
-    "type": "DATETIME"
+    "type": "DATETIME",
+    "description": "Tidspunkt for kjøring av transformasjonen"
   }
 ]

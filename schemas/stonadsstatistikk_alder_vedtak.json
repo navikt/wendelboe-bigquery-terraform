@@ -7,27 +7,32 @@
   {
     "mode": "NULLABLE",
     "name": "sak_id",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": "ID for saken i Pesys"
   },
   {
     "mode": "NULLABLE",
     "name": "vedtak_id",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": "ID for det løpende vedtaket. Månedlig unik i kombinasjon med periode."
   },
   {
     "mode": "NULLABLE",
     "name": "kravhode_id",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": "ID for det fremmede kravet"
   },
   {
     "mode": "NULLABLE",
     "name": "k_regelverk_t",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "Typen regelverk som er anvendt i utregningen av ytelsen. G_REG: Til og med 2010, gammelt regelverk (AP kap 19 tom 2010). N_REG_G_OPPTJ: 2011-2015 nytt regelverk, gammel opptjening (AP kap. 19 og kap. 20). N_REG_G_N_OPPTJ: 2016-2024 nytt regelverk, kombo av gammel og ny opptjening (AP kap 19 fom 2011) - overgangskullene født 1954-1962. N_REG_N_OPPTJ: Fra og med 2025, nytt regelverk og ny opptjening (AP kap. 20)."
   },
   {
     "mode": "NULLABLE",
     "name": "person_id",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": "ID for mottakeren. Pesys-ID"
   },
   {
     "mode": "NULLABLE",
@@ -37,12 +42,14 @@
   {
     "mode": "NULLABLE",
     "name": "k_sak_t",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "Sakstypen. Denne er alltid ALDER"
   },
   {
     "mode": "NULLABLE",
     "name": "k_vedtak_s",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "Status for vedtaket. Typisk LOPENDE, men er i noen tilfeller feks STOPPET. Det er vedtak som fortsatt er løpende, men som saksbehandler manuelt har stoppet feks på grunn av innmeldt dødsfall i forkant av offisiell dødsmelding."
   },
   {
     "mode": "NULLABLE",
@@ -52,37 +59,44 @@
   {
     "mode": "NULLABLE",
     "name": "dato_lopende_fom",
-    "type": "DATETIME"
+    "type": "DATETIME",
+    "description": "Vedtakets løpende dato fra og med"
   },
   {
     "mode": "NULLABLE",
     "name": "dato_lopende_tom",
-    "type": "DATETIME"
+    "type": "DATETIME",
+    "description": "Vedtakets løpende dato til og med"
   },
   {
     "mode": "NULLABLE",
     "name": "bostedsland",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "Bostedsland for personen. Hentet fra t_person"
   },
   {
     "mode": "NULLABLE",
     "name": "inntekt",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "inntekt fra fpi_belop fra t_inntekt gjennom int_inntektsinfo"
   },
   {
     "mode": "NULLABLE",
     "name": "inntekt_eps",
-    "type": "FLOAT"
+    "type": "FLOAT",
+    "description": "inntekt fpi_belop for EPS fra t_inntekt gjennom int_eps_inntektsinfo"
   },
   {
     "mode": "NULLABLE",
     "name": "eps_aarlig_inntekt",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": "Sum av inntekt_penskd_belop, inntekt_fki_belop, inntekt_fpi_belop og inntekt_pent_belop fra t_inntekt gjennom int_eps_inntektsinfo"
   },
   {
     "mode": "NULLABLE",
     "name": "afp_privat_flagg",
-    "type": "STRING"
+    "type": "STRING",
+    "description": "Alle løpende ALDER vedtak som også har et løpende vedtak med k_sak_t=AFP_PRIVATE"
   },
   {
     "mode": "NULLABLE",
@@ -97,6 +111,7 @@
   {
     "mode": "NULLABLE",
     "name": "kjoretidspunkt",
-    "type": "DATETIME"
+    "type": "DATETIME",
+    "description": "Tidspunkt for kjøring av transformasjonen"
   }
 ]
