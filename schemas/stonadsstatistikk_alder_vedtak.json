@@ -72,6 +72,18 @@
   },
   {
     "mode": "NULLABLE",
+    "name": "forste_dato_virk_fom",
+    "type": "DATETIME",
+    "description": "Saken sin første dato_virk_fom, hentet fra det det vedtaket med lavest dato_lopende_fom. Feltet brukes til å beregne pensjoneringstidspunkt, men feltet er 01.01.2009 for data migrert fra infotrygd"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "forste_dato_lopende_fom",
+    "type": "DATETIME",
+    "description": "Saken sin første dato_lopende_fom, hentet fra det det vedtaket med lavest dato_lopende_fom"
+  },
+  {
+    "mode": "NULLABLE",
     "name": "bostedsland",
     "type": "FLOAT",
     "description": "Bostedsland for personen. Hentet fra t_person"
