@@ -42,12 +42,13 @@ resource "google_bigquery_table" "raw_norg2_intern_nav_table" {
     "name": "extracted_at",
     "type": "TIMESTAMP",
     "mode": "REQUIRED",
-    "description": "The time the Python script fetched the data"
+    "description": "The time the Python script fetched the data",
+    "defaultValueExpression": "CURRENT_TIMESTAMP()"
   },
   {
     "name": "raw_json_payload",
     "type": "JSON",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "description": "The unaltered JSON payload from the API"
   }
 ]
