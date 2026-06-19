@@ -75,7 +75,8 @@
     "name": "teknisk_tid",
     "type": "TIMESTAMP",
     "description": "Tidspunktet raden oppstår i historikktabellen som dette dataproduktet bygger på.",
-    "mode": "NULLABLE"
+    "mode": "NULLABLE",
+    "default": "CURRENT_TIMESTAMP()"
   },
   {
     "name": "sak_ytelse",
