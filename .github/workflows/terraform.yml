@@ -24,7 +24,7 @@ jobs:
       GOOGLE_CREDENTIALS: ${{ secrets.GCP_SECRET_DEV }}
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Run 'terraform setup'
         uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e
@@ -53,7 +53,7 @@ jobs:
       GOOGLE_CREDENTIALS: ${{ secrets.GCP_SECRET_PROD }}
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Run 'terraform setup'
         uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e
@@ -83,7 +83,7 @@ jobs:
       GOOGLE_CREDENTIALS: ${{ secrets.GCP_SECRET_DEV }}
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Run 'terraform setup'
         uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e
@@ -107,7 +107,7 @@ jobs:
       GOOGLE_CREDENTIALS: ${{ secrets.GCP_SECRET_PROD }}
     steps:
       - name: "Checkout code"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Run 'terraform setup'
         uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e
