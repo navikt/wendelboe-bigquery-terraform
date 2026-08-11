@@ -46,6 +46,22 @@ resource "google_bigquery_table" "stonadsstatistikk_alder_vedtak" {
 
 }
 
+resource "google_bigquery_table" "stonadsstatistikk_ufore" {
+  dataset_id = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
+  table_id   = "stonadsstatistikk_ufore"
+  time_partitioning {
+    type  = "MONTH"
+    field = "periode"
+  }
+
+  labels = {
+    env = "default"
+  }
+
+  schema = file("${path.module}/../schemas/stonadsstatistikk_ufore.json")
+
+}
+
 resource "google_bigquery_dataset_access" "pen_dataprodukt_stonadsstatistikk_alder_belop_view_access" {
   dataset_id = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
   project    = var.gcp_project["project"]

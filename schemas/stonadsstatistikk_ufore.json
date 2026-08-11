@@ -1,0 +1,572 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "periode",
+    "type": "DATE",
+    "description": "ÅÅÅÅMM, beregnet ved utgangen av måneden"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "vedtak_id",
+    "type": "INTEGER",
+    "description": "ID for vedtaket som var løpende kl 23:59:59 siste dag i måneden. Månedlig unik i kombinasjon med periode."
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sak_id",
+    "type": "INTEGER",
+    "description": "ID for saken i Pesys"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "kravhode_id",
+    "type": "INTEGER",
+    "description": "ID for kravet som vedtaket er knyttet til"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_sak_t",
+    "type": "STRING",
+    "description": "Sakstypen. Denne er alltid UFOREP"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "varig_vedtak",
+    "type": "INTEGER",
+    "description": "1 hvis kravet er varig, 0 hvis vedtak finnes men ikke varig, null hvis kun etteroppgjør"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "forelopig_vedtak",
+    "type": "INTEGER",
+    "description": "1 hvis kravet er foreløpig, 0 hvis vedtak finnes men ikke foreløpig, null hvis kun etteroppgjør"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dato_lopende_fom",
+    "type": "DATETIME",
+    "description": "Vedtakets løpende dato fra og med"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dato_lopende_tom",
+    "type": "DATETIME",
+    "description": "Vedtakets løpende dato til og med"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "total_belop_netto",
+    "type": "FLOAT",
+    "description": "Totalt netto beløp for utbetalingen"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "total_belop_brutto",
+    "type": "FLOAT",
+    "description": "Totalt brutto beløp for utbetalingen"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "folketrygd_2016",
+    "type": "FLOAT",
+    "description": "Sum av uføretrygd ordinær netto og gjenlevendetillegg netto"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ufor_sum_ut_ord_netto",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ufor_sum_tillegg_netto",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_sb_reduksjon_ar_belop",
+    "type": "FLOAT",
+    "description": "reduksjonsinformasjon"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_fb_reduksjon_ar_belop",
+    "type": "FLOAT",
+    "description": "reduksjonsinformasjon"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_fb_brutto_fr_ar_belop",
+    "type": "FLOAT",
+    "description": "reduksjonsinformasjon"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_sb_brutto_fr_ar_belop",
+    "type": "FLOAT",
+    "description": "reduksjonsinformasjon"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_oifu_for_tak_prosent",
+    "type": "FLOAT",
+    "description": "reduksjonsinformasjon"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_sb_nto_ar_belop",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_fb_nto_ar_belop",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_sb_fri_ar_belop",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_fb_fri_ar_belop",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_fb_brutto_ar_belop",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_sb_brutto_ar_belop",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_fb_avkortning_ar_belop",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbt_sb_avkortning_ar_belop",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "inntekt_annen_forelder",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "blp_fratrkt_annen_foreld_innt",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "barn_under_18_felles_antall",
+    "type": "INTEGER",
+    "description": "Antall felles barn under 18 år"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "bruker_inntekt_avkort",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "eps_arlig_inntekt_belop",
+    "type": "FLOAT",
+    "description": "Ektefelle/samboers årlige inntekt"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ut_et_netto",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ut_sp_netto",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ut_tfb_netto",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ut_tsb_netto",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ut_gjt_netto",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ut_fast_utg_inst_netto",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ut_gt_nordisk_netto",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ut_aap_netto",
+    "type": "FLOAT",
+    "description": "ytelse komp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "utbetalingsgrad",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "alder",
+    "type": "INTEGER",
+    "description": "Alder ved utgangen av perioden"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "alder_ufor",
+    "type": "INTEGER",
+    "description": "Alder ved første uføretidspunkt"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "alder_fix",
+    "type": "INTEGER",
+    "description": "Alder korrigert for fødselsdato samme måned som periodeslutt"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dato_fodsel",
+    "type": "DATETIME",
+    "description": "Fødselsdato for personen"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "forste_ufore_dato",
+    "type": "DATETIME",
+    "description": "Første dato_ufore_fom fra uførehistorikk"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "forste_virkning_ufore_dato",
+    "type": "DATETIME",
+    "description": "Første virkningsdato fra uførehistorikk"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "gjeldende_ufore_dato",
+    "type": "DATETIME",
+    "description": "Siste dato_ufore_fom fra uførehistorikk"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "konvertert",
+    "type": "INTEGER",
+    "description": "1 hvis vedtaket har et konverteringsgrunnlag, 0 hvis vedtak finnes uten, null hvis kun etteroppgjør"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "uforegrad",
+    "type": "FLOAT",
+    "description": "Uføregrad fra beregning 2011"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "mottar_minsteytelse",
+    "type": "INTEGER",
+    "description": "1|0, fra beregning 2011"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ung_ufor_anv_flagg",
+    "type": "INTEGER",
+    "description": "Ung ufør benyttet"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ung_ufor_rett_flagg",
+    "type": "INTEGER",
+    "description": "Ung ufør oppfylt"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "yrkesskade_rett_flagg",
+    "type": "INTEGER",
+    "description": "Indikerer om personen har rett til yrkesskade ytelse ved siden av pensjonen"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "yrkesskade_anv_flagg",
+    "type": "INTEGER",
+    "description": "Indikerer om personen har yrkesskade ytelse ved siden av pensjonen"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "mottar_min_ufore_niva_pen_flagg",
+    "type": "INTEGER",
+    "description": "1 hvis mottar minsteytelse og ikke ung ufør, 0 hvis vedtak finnes uten, null hvis kun etteroppgjør"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "inntektsgrense",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "belopsgrense",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "inntektstak",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "egenopptjening_arsbelop",
+    "type": "FLOAT",
+    "description": "Egenopptjent årsbeløp"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "oifu",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "oieu",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "forventet_inntekt",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "inntektsgrense_neste_aar",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "avkortet_per_aar",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "rest_til_utbetaling",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "differansebelop",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ugradert_brutto_per_ar",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "kompensasjonsgrad",
+    "type": "FLOAT",
+    "description": "avkort info"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "inntekt_foer",
+    "type": "FLOAT",
+    "description": "Inntekt før uførhet, fra beregningsvilkår"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "inntekt_etter",
+    "type": "FLOAT",
+    "description": "Inntekt etter uførhet, fra beregningsvilkår"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "forintarb",
+    "type": "FLOAT",
+    "description": "Inntekt for uførhet, arbeid"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "forintnae",
+    "type": "FLOAT",
+    "description": "Inntekt for uførhet, næring"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "forintutl",
+    "type": "FLOAT",
+    "description": "Inntekt for uførhet, utland"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ufor_prorata",
+    "type": "FLOAT",
+    "description": "Prorata-brøk (teller/nevner) for trygdetid"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "persnr",
+    "type": "STRING",
+    "description": "Fødselsnummer for mottakeren"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_vedtak_t",
+    "type": "STRING",
+    "description": "Type vedtak. FORGANG | REGULERING | ENDRING | SAMMENSTOT | GOMR | OPPHOR"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "k_vedtak_s",
+    "type": "STRING",
+    "description": "Status for vedtaket"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sats_minsteytelse",
+    "type": "FLOAT",
+    "description": "Sats for minsteytelse"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "minsteytelse_niva",
+    "type": "STRING",
+    "description": "Nivå for minsteytelse"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "bostatus",
+    "type": "STRING",
+    "description": "Bostatus (k_bor_med_t) fra minsteytelsesberegningen"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "trygdetid",
+    "type": "FLOAT",
+    "description": "Anvendt trygdetid fra beregning 2011"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "gjeldende_virkning_ufore_dato",
+    "type": "DATETIME",
+    "description": "Vedtakets dato_virk_fom"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "bostatus_sats",
+    "type": "STRING",
+    "description": "Bostatus (k_bor_med_t) fra beregningsresultatet"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "vedtak_flagg",
+    "type": "INTEGER",
+    "description": "1 hvis raden har et regulært løpende vedtak, ellers 0"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "eo_flagg",
+    "type": "INTEGER",
+    "description": "1 hvis raden har et etteroppgjør, ellers 0"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "antall_ie_vedtak_saksb",
+    "type": "INTEGER",
+    "description": "Antall inntektsendringsvedtak initiert av saksbehandler"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "antall_ie_vedtak_bruker",
+    "type": "INTEGER",
+    "description": "Antall inntektsendringsvedtak initiert av bruker"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "antall_ie_vedtak_prosess",
+    "type": "INTEGER",
+    "description": "Antall inntektsendringsvedtak initiert av prosess"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "eo_vedtak",
+    "type": "INTEGER",
+    "description": "Vedtak-ID for etteroppgjøret"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "etterbetalt_belop",
+    "type": "FLOAT",
+    "description": "Etterbetalt beløp fra etteroppgjør"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tilbakekrevd_belop",
+    "type": "FLOAT",
+    "description": "Tilbakekrevd beløp fra etteroppgjør"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "etteroppgjor_aar",
+    "type": "INTEGER",
+    "description": "Året etteroppgjøret gjelder for"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "revurdering_flagg",
+    "type": "INTEGER",
+    "description": "1 hvis etteroppgjøret er en revurdering"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "kjoretidspunkt",
+    "type": "DATETIME",
+    "description": "Tidspunkt for kjøring av transformasjonen"
+  }
+]
