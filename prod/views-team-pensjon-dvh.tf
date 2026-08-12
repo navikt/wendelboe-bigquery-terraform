@@ -95,3 +95,27 @@ resource "google_bigquery_table_iam_binding" "stonadsstatistikk_alder_vedtak_vie
   role       = "roles/bigquery.dataViewer"
   members    = ["serviceAccount:consumer-alder@dv-team-pensjon-prod-fb4a.iam.gserviceaccount.com"]
 }
+
+
+module "stonadsstatistikk_ufore_til_team_pensjon_dvh_view" {
+  source              = "../modules/google-bigquery-view"
+  deletion_protection = false
+  dataset_id          = google_bigquery_dataset.stonadsstatistikk_til_team_pensjon_dvh_dataset.dataset_id
+  view_id             = "stonadsstatistikk_ufore_view"
+  view_description    = "Basert på en rekke hendelser fra pen_dataprodukt skjemaet i pen-databasen"
+  view_schema         = file("${path.module}/../schemas/stonadsstatistikk_ufore.json")
+  view_query          = <<EOF
+SELECT
+  *
+FROM
+  `${var.gcp_project["project"]}.${google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id}.stonadsstatistikk_ufore`
+EOF
+}
+
+resource "google_bigquery_table_iam_binding" "stonadsstatistikk_ufore_view_iam_binding" {
+  project    = var.gcp_project.project
+  dataset_id = google_bigquery_dataset.stonadsstatistikk_til_team_pensjon_dvh_dataset.dataset_id
+  table_id   = module.stonadsstatistikk_ufore_til_team_pensjon_dvh_view.bigquery_view_id
+  role       = "roles/bigquery.dataViewer"
+  members    = ["serviceAccount:consumer-alder@dv-team-pensjon-prod-fb4a.iam.gserviceaccount.com"]
+}

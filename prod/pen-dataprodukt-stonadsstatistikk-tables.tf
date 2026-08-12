@@ -102,6 +102,18 @@ resource "google_bigquery_dataset_access" "pen_dataprodukt_stonadsstatistikk_ald
   depends_on = [module.stonadsstatistikk_alder_vedtak_til_team_pensjon_dvh_view]
 }
 
+resource "google_bigquery_dataset_access" "pen_dataprodukt_stonadsstatistikk_ufore_view_access" {
+  dataset_id = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
+  project    = var.gcp_project["project"]
+  view {
+    dataset_id = google_bigquery_dataset.stonadsstatistikk_til_team_pensjon_dvh_dataset.dataset_id
+    project_id = var.gcp_project["project"]
+    table_id   = module.stonadsstatistikk_ufore_til_team_pensjon_dvh_view.bigquery_view_id
+  }
+
+  depends_on = [module.stonadsstatistikk_ufore_til_team_pensjon_dvh_view]
+}
+
 resource "google_bigquery_table" "dataprodukt_ufore_diagnosekoder" {
   dataset_id = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
   table_id   = "dataprodukt_ufore_diagnosekoder"
