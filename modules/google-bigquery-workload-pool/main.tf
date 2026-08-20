@@ -1,8 +1,8 @@
 
 # Make workload pool
 resource "google_iam_workload_identity_pool" "dbt-workload-pool" {
-  workload_identity_pool_id = "pen-analyse-bq-identity-pool"
-  display_name              = "pen-analyse-bq-identity-pool"
+  workload_identity_pool_id = "pen-analyse-bq-identity-pool-v3"
+  display_name              = "pen-analyse-bq-identity-pool-v3"
   description               = "Identity pool for dbt from pensjon-analyse-bq GitHub project"
   project                   = var.project_id
 }

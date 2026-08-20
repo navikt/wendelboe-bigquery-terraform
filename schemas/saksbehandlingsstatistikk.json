@@ -1,7 +1,7 @@
 [
   {
     "name": "sekvensnummer",
-    "type": "INT64",
+    "type": "INTEGER",
     "description": "Løpenummer tildelt ved lagring av rad i denne tabellen.",
     "mode": "NULLABLE"
   },
@@ -76,7 +76,7 @@
     "type": "TIMESTAMP",
     "description": "Tidspunktet raden oppstår i historikktabellen som dette dataproduktet bygger på.",
     "mode": "NULLABLE",
-    "default": "CURRENT_TIMESTAMP()"
+    "defaultValueExpression": "CURRENT_TIMESTAMP()"
   },
   {
     "name": "sak_ytelse",
@@ -146,7 +146,7 @@
   },
   {
     "name": "tilbakekrev_belop",
-    "type": "FLOAT64",
+    "type": "FLOAT",
     "description": "Ikke ferdig. Settes alltid til -1.1.",
     "mode": "NULLABLE"
   },

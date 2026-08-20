@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "gcs" {
-    bucket = "wendelboe-bigquery-terraform-state-dev"
+    bucket = "spudi-bigquery-terraform-state-dev"
   }
 }
 
@@ -20,6 +20,6 @@ data "google_project" "project" {}
 
 module "google_storage_bucket" {
   source   = "../modules/google-cloud-storage"
-  name     = "wendelboe-bigquery-terraform-state-dev"
+  name     = "spudi-bigquery-terraform-state-dev"
   location = var.gcp_project["region"]
 }

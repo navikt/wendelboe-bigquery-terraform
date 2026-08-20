@@ -1,6 +1,6 @@
-# wendelboe-bigquery-terraform
+# spudi-bigquery-terraform
 
-Terraform-scipts for å opprette BigQuery-ressurser for Team Wendelboe i Seksjon Pensjon og Uføre.
+Terraform-scipts for å opprette BigQuery-ressurser for Team spudi i Seksjon Pensjon og Uføre.
 
 ## Hvordan kjøre Terraform lokalt
 
@@ -65,4 +65,4 @@ Opprettelse av bucket og bruk av denne for terraform state må gjøres i to sepa
 
 Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på GitHub.
 
-Interne henvendelser kan sendes via Slack i kanalen [#team-wendelboe](https://nav-it.slack.com/archives/C095TK7F27J).
+Interne henvendelser kan sendes via Slack i kanalen [#pensjon-og-uføretrygd-data-innsikt](https://nav-it.slack.com/archives/C0BRE8RR893).

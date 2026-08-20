@@ -4,6 +4,6 @@ variable "gcp_project" {
   default = {
     region  = "europe-north1",
     zone    = "europe-north1-a",
-    project = "pensjon-saksbehandli-dev-cb76"
+    project = "spu-data-innsikt-dev-da53"
   }
 }

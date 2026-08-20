@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "wendelboe-bigquery-terraform-state-prod"
+    bucket = "spudi-bigquery-terraform-state-prod"
   }
 }
 
@@ -20,7 +20,7 @@ data "google_project" "project" {}
 module "google_storage_bucket" {
   source = "../modules/google-cloud-storage"
 
-  name     = "wendelboe-bigquery-terraform-state-prod"
+  name     = "spudi-bigquery-terraform-state-prod"
   location = var.gcp_project["region"]
 }
 
@@ -37,9 +37,11 @@ module "google_bigquery_workload_pool" {
 module "google_storage_bucket_dbt_state" {
   source = "../modules/google-cloud-storage"
 
-  name                        = "pensjon-analyse-bq-state"
+  name                        = "pensjon-analyse-bq-state-v3"
   location                    = var.gcp_project["region"]
   versioning                  = false
-  principals                  = [module.google_bigquery_workload_pool.workpool-sa-email]
+  principals = {
+    dbt_workload_pool = module.google_bigquery_workload_pool.workpool-sa-email
+  }
   uniform_bucket_level_access = true
 }

@@ -26,9 +26,9 @@ variable "force_destroy" {
 }
 
 variable "principals" {
-  default     = []
-  type        = list(string)
-  description = "List of principals to grant access to the bucket."
+  default     = {}
+  type        = map(string)
+  description = "Map of static keys to principal members to grant access to the bucket."
 }
 
 variable "uniform_bucket_level_access" {
