@@ -37,9 +37,9 @@ module "google_bigquery_workload_pool" {
 module "google_storage_bucket_dbt_state" {
   source = "../modules/google-cloud-storage"
 
-  name                        = "pensjon-analyse-bq-state-v3"
-  location                    = var.gcp_project["region"]
-  versioning                  = false
+  name       = "pensjon-analyse-bq-state-v3"
+  location   = var.gcp_project["region"]
+  versioning = false
   principals = {
     dbt_workload_pool = module.google_bigquery_workload_pool.workpool-sa-email
   }
