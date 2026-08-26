@@ -17,10 +17,10 @@ resource "google_bigquery_dataset" "stonadsstatistikk_til_team_pensjon_dvh_datas
     role          = "WRITER"
     special_group = "projectWriters"
   }
-  # access {
-  #   role          = "READER"
-  #   user_by_email = ""
-  # }
+  access {
+    role          = "READER"
+    user_by_email = "rune.jordet@nav.no"
+  }
   timeouts {}
 }
 
