@@ -58,5 +58,11 @@
     "type": "DATETIME",
     "description": "Opphørsvedtakets virkningstidspunkt.",
     "mode": "NULLABLE"
+  },
+    {
+    "mode": "NULLABLE",
+    "name": "kjoretidspunkt",
+    "type": "DATETIME",
+    "description": "Tidspunkt for kjøring av transformasjonen"
   }
 ]
