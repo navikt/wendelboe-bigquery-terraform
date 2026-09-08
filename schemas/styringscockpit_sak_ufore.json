@@ -1,0 +1,62 @@
+[
+  {
+    "name": "sak_id",
+    "type": "STRING",
+    "description": "Unik identifikator for saken.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "k_sak_t",
+    "type": "STRING",
+    "description": "Sakstype.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "kjonn",
+    "type": "STRING",
+    "description": "Kjønn til personen saken gjelder. M | K",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fodselsaar",
+    "type": "INTEGER",
+    "description": "Fødselsår til personen saken gjelder.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "k_utlandstilknytning",
+    "type": "STRING",
+    "description": "UTLAND | NASJONAL | UTLANDSTILSNITT.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "sak_dato_opprettet",
+    "type": "DATETIME",
+    "description": "Dato saken ble opprettet. Fra pen.t_sak.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "avsluttet_dato",
+    "type": "DATETIME",
+    "description": "Dato saken ble avsluttet.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "avsluttet_arsak",
+    "type": "STRING",
+    "description": "Årsak til at saken ble avsluttet. Kan være null for saker som ikke er avsluttet.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "gyldig_fra_dato",
+    "type": "DATETIME",
+    "description": "Vedtakets virkningstidspunkt.",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "gyldig_til_dato",
+    "type": "DATETIME",
+    "description": "Opphørsvedtakets virkningstidspunkt.",
+    "mode": "NULLABLE"
+  }
+]
