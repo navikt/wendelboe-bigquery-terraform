@@ -21,7 +21,7 @@ resource "google_bigquery_dataset" "stonadsstatistikk_til_team_pensjon_dvh_datas
     role          = "READER"
     user_by_email = "rune.jordet@nav.no"
   }
-access {
+  access {
     role          = "READER"
     user_by_email = "consumer-alder@dv-team-pensjon-dev-9a2c.iam.gserviceaccount.com"
   }
