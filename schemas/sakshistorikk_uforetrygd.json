@@ -19,7 +19,7 @@
   },
   {
     "name": "er_siste_periode",
-    "type": "INTEGER",
+    "type": "STRING",
     "description": "Flagg (0/1) som angir om perioden er den siste perioden på saken.",
     "mode": "NULLABLE"
   },
