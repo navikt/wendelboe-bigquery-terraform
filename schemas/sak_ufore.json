@@ -1,7 +1,7 @@
 [
   {
     "name": "sak_id",
-    "type": "STRING",
+    "type": "INTEGER",
     "description": "Unik identifikator for saken.",
     "mode": "NULLABLE"
   },
