@@ -49,6 +49,25 @@ resource "google_bigquery_table" "stonadsstatistikk_alder_vedtak" {
 
 }
 
+# One-time DDL job because the pinned provider does not expose this table option.
+resource "google_bigquery_job" "stonadsstatistikk_change_history" {
+  job_id = "enable_stonadsstatistikk_change_history"
+
+  query {
+    query          = <<-SQL
+      ALTER TABLE `${var.gcp_project["project"]}.${google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id}.${google_bigquery_table.stonadsstatistikk_alder_beregning.table_id}`
+      SET OPTIONS (enable_change_history = TRUE);
+
+      ALTER TABLE `${var.gcp_project["project"]}.${google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id}.${google_bigquery_table.stonadsstatistikk_alder_vedtak.table_id}`
+      SET OPTIONS (enable_change_history = TRUE);
+
+      ALTER TABLE `${var.gcp_project["project"]}.${google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id}.${google_bigquery_table.stonadsstatistikk_alder_belop.table_id}`
+      SET OPTIONS (enable_change_history = TRUE);
+    SQL
+    use_legacy_sql = false
+  }
+}
+
 resource "google_bigquery_table" "stonadsstatistikk_ufore" {
   dataset_id = google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id
   table_id   = "stonadsstatistikk_ufore"
