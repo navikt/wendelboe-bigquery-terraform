@@ -45,6 +45,7 @@ SELECT
   *
 FROM
   `${var.gcp_project["project"]}.${google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id}.saksbehandlingsstatistikk_ufore`
+where endret_tid > timestamp('2026-06-01')
 EOF
 }
 
@@ -71,6 +72,7 @@ SELECT
   *
 FROM
   `${var.gcp_project["project"]}.${google_bigquery_dataset.pen_dataprodukt_dataset.dataset_id}.saksbehandlingsstatistikk_alder`
+where endret_tid > timestamp('2026-06-01')
 EOF
 }
 
